@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Temple</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(240, 234, 234);
+        }
+        .header {
+            background-color: rgb(245, 241, 15);
+            text-align: center;
+            padding: 20px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+        .nav a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .social {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+        }
+        .social a {
+            display: inline-block;
+            margin: 5px;
+            background-color: rgb(194, 19, 19);
+            color: rgb(241, 234, 234);
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+        .temple-image {
+            background: url('images/mo.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            opacity: 0.5;
+            
+        }
+        .temple-description {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: rgb(5, 5, 5);
+            margin-top: 100px;
+           
+            
+        }
+        .image-container {
+            background: url('images/mo.jpg') no-repeat center center;
+            flex: 1;
+            padding: 20px;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            margin-left: 75px;
+            margin-right: 750px;
+            margin-top: 150px;
+            border-radius: 30px;
+            overflow: hidden;
+           
+        }
+        .rounded-image {
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            
+        }
+        .about-temple {
+            flex: 2;
+            padding: 20px;
+            color: rgb(7, 7, 7);
+            margin-left: 750px;
+            margin-right: 75px;
+            margin-top: -650px;
+            float: right;
+           
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .grid-image {
+            width: 80%;
+            height: auto;
+            border-radius: 20px;
+            
+            
+        }
+        .photos-description {
+            flex: 2;
+            padding: 20px;
+            color: rgb(7, 7, 7);
+            margin-left: 100px;
+            margin-right: 15px;
+            margin-top: -1050px;
+            float: right;
+
+         } 
+         /* Add this CSS code to your existing styles */
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    flex-direction: row; /* Ensure a horizontal layout */
+}
+
+.service-container {
+    text-align: center;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.service-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.service-description {
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+.service-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.location {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.location h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.location p {
+    font-size: 18px;
+}
+
+.location iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+/* Add this CSS code to your existing styles */
+.contact {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-member {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.contact-member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-member p {
+    margin: 5px 0;
+}
+/* Add this CSS code to your existing styles */
+.donation {
+    background-color: rgba(230, 37, 37, 0.5);
+    padding: 20px;
+    color: white;
+}
+
+.donation h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.account-details,
+.phonepe-numbers {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.account-details h3,
+.phonepe-numbers h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.account-details p,
+.phonepe-numbers p {
+    margin: 5px 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .slider {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s ease;
+            align-items: center;
+            display: inline-block;
+           
+        }
+
+        .slider img {
+            width: 300px; /* Adjust the width as needed */
+            height: 200px;
+            margin-right: 25px;
+            margin-right: 25px;
+            margin: 0 10px; /* Adjust the spacing as needed */
+            max-width: 400px; /* Adjust the width as needed */
+            height: 200px;
+            border-radius: 20px;
+            margin-top: 0px;
+            margin-top: 50px;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 95%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 25px;
+            margin-right: 25px;
+
+        }
+
+        #prevBtn {
+            left: 0;
+        }
+
+        #nextBtn {
+            right: 0;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>J Temple</h1>
+    </div>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#photos">Photos</a>
+        <a href="#services">Services</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+
+    <div class="content">
+        <div class="temple-image">
+            <div class="temple-description">
+                <h1>Welcome to J Temple</h1>
+                <p>A place of tranquility and spirituality.</p>
+                <p>Discover inner peace and serenity here.</p>
+            </div>
+   
+        </div>
+        <div class="image-container">
+            <img src="images/mo.jpg" alt="Temple Image" class="rounded-image">
+        </div>
+        <div class="about-temple">
+            <h2>About Our Temple</h2>
+            <p>J Temple is a place of worship and spiritual reflection. Nestled in a serene environment, it offers a peaceful retreat
+                 for all who seek solace and connection with the divine. Our temple is open to people of all backgrounds and
+                  beliefs, welcoming you to explore the profound beauty of spirituality.</p>
+                  <p>In Sri Sakanda Purana, the avatar story of this goddess is given as follows. After the death of Sage Kardam
+                     in Krita Yuga, his wife Anubhuti decided to cohabit with her husband. But as she had a minor son, other 
+                     sages persuaded her, so she gave up the plan for the sake of the minor son and started doing penance on
+                      the banks of the river Mandakini. At that time, a demon named Kukar tried to break her fever and celibacy.
+                       Anubhuti cried out to Shri Bhagwati in the time of distress and Shri Bhagwati incarnated and killed
+                     the evil demon and at the request of Anubhuti he lived forever on the mountain Yamunachal (Bala Ghat).</p>
+        </div>
+        <div class="image-grid">
+            <img src="images/mo.jpg" alt="Image 1" class="grid-image">
+            <img src="images/mo.jpg" alt="Image 2" class="grid-image">
+            <img src="images/mo.jpg" alt="Image 3" class="grid-image">
+            <img src="images/mo.jpg" alt="Image 4" class="grid-image">
+            <img src="images/mo.jpg" alt="Image 5" class="grid-image">
+            <img src="images/mo.jpg" alt="Image 6" class="grid-image">
+            <div class="photos-description">
+                <h1>PHOTOS</h1>
+            </div>
+        </div>
+    </div>
+    
+        <div class="services">
+            <div class="service-container">
+                <img src="images/pooja.jpg" alt="Service 1" class="service-image">
+                <button class="service-button" onclick="toggleDescription('service1-description')">Service 1</button>
+                <div class="service-description" id="service1-description">
+                    <h2>Service 1</h2>
+                    <ul>
+                        <li>Point 1 description</li>
+                        <li>Point 2 description</li>
+                        <li>Point 3 description</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="service-container">
+                <img src="images/pooja.jpg" alt="Service 2" class="service-image">
+                <button class="service-button" onclick="toggleDescription('service2-description')">Service 2</button>
+                <div class="service-description" id="service2-description">
+                    <h2>Service 2</h2>
+                    <ul>
+                        <li>Point 1 description</li>
+                        <li>Point 2 description</li>
+                        <li>Point 3 description</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="service-container">
+                <img src="images/pooja.jpg" alt="Service 3" class="service-image">
+                <button class="service-button" onclick="toggleDescription('service3-description')">Service 3</button>
+                <div class="service-description" id="service3-description">
+                    <h2>Service 3</h2>
+                    <ul>
+                        <li>Point 1 description</li>
+                        <li>Point 2 description</li>
+                        <li>Point 3 description</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this HTML code to your existing content -->
+<section class="donation">
+    <h2>Donation Information</h2>
+    
+    <!-- Bank Account Details -->
+    <div class="account-details">
+        <h3>Bank Account Details</h3>
+        <p>Bank Name: Your Bank</p>
+        <p>Account Name: J Temple Donation</p>
+        <p>Account Number: XXXXXXXXXX</p>
+        <p>IFSC Code: XXXX12345</p>
+    </div>
+    
+    <!-- PhonePe Numbers -->
+    <div class="phonepe-numbers">
+        <h3>PhonePe Numbers</h3>
+        <p>PhonePe Number 1: +1234567890</p>
+        <p>PhonePe Number 2: +9876543210</p>
+    </div>
+</section>
+
+<section class="image-slider">
+    <h2>Centered Image Slider</h2>
+    <div class="slider-container">
+        <button id="prevBtn" class="slider-button">&#10094; Previous</button>
+        <div class="slider">
+            <img src="images/pooja.jpg" alt="Image 1">
+            <img src="images/pooja.jpg" alt="Image 2">
+            <img src="images/pooja.jpg" alt="Image 3">
+          
+            <!-- Add more image items here -->
+        </div>
+        <button id="nextBtn" class="slider-button">&#10095; Next</button>
+    </div>
+</section>
+
+
+    <section class="location">
+        <h2>Location</h2>
+        <p>Visit us at:</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.3260146549837!2d75.5283823!3d15.8237313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb88fdc19045bd9%3A0x30b4482b5a4065e0!2sShri%20Javlambika%20Ambabhavani%20Temple!5e0!3m2!1sen!2sus!4v1628021749370!5m2!1sen!2sus"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+        ></iframe>
+    </section>
+     <!-- Add this HTML code to your existing content -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-member">
+        <h3>Member 1</h3>
+        <p>Email: member1@example.com</p>
+        <p>WhatsApp: +1234567890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+    </div>
+    <div class="contact-member">
+        <h3>Member 2</h3>
+        <p>Email: member2@example.com</p>
+        <p>WhatsApp: +9876543210</p>
+        <p>Address: 456 Elm Street, City, Country</p>
+    </div>
+    <div class="contact-member">
+        <h3>Member 3</h3>
+        <p>Email: member3@example.com</p>
+        <p>WhatsApp: +3456789012</p>
+        <p>Address: 789 Oak Street, City, Country</p>
+    </div>
+    <div class="contact-member">
+        <h3>Member 4</h3>
+        <p>Email: member4@example.com</p>
+        <p>WhatsApp: +2345678901</p>
+        <p>Address: 012 Pine Street, City, Country</p>
+    </div>
+</section>
+
+
+
+
+
+    <div class="social">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+    </div>
+
+    
+    <script>
+        function toggleDescription(serviceId) {
+            var description = document.getElementById(serviceId);
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+            } else {
+                description.style.display = 'block';
+            }
+        }
+    </script>
+   <script>
+    // Add this JavaScript code to your existing script section
+const slider = document.querySelector('.slider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 25}%)`;
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        showSlide(currentIndex);
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    const maxIndex = Math.min(currentIndex + 4, slider.children.length - 1);
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        showSlide(currentIndex);
+    }
+});
+
+</script>
+
+
+    
+</body>
+</html>
